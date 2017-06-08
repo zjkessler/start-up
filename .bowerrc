@@ -1,0 +1,7 @@
+{
+    "directory": "src/client/assets/bower_components",
+    "scripts": {
+        "postinstall": "gulpwiredep"
+
+    }
+}
