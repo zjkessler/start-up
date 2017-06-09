@@ -1,7 +1,7 @@
 {
   "name": "start-up",
   "description": "",
-  "main": "gulp.config.js",
+  "main": "server.js",
   "authors": [
     "Zach Kessler <zjkessler@gmail.com>"
   ],
