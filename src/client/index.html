@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Start-up</title>
     <base href="/" target="">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bower:css -->
     <link rel="stylesheet" href="assets/bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="assets/bower_components/angular-material-icons/angular-material-icons.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css" />
 
     <!-- inject:css -->
     <link rel="stylesheet" href="assets/styles.css">
@@ -19,7 +23,12 @@
 
 <body>
 
-    <h1>It's Alive</h1>
+    <md-content flex ng-cloak>
+        <nav></nav>
+        <div class="container">
+            <ui-view></ui-view>
+        </div>
+    </md-content>
 
     <!-- bower:js -->
     <script src="assets/bower_components/angular/angular.js"></script>
@@ -38,6 +47,8 @@
     <!-- endbower -->
     <!-- inject:js -->
     <script src="app.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/nav/nav.js"></script>
     <!-- endinject -->
 </body>
 

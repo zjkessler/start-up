@@ -2,6 +2,17 @@ var app = angular.module('StartUpApp', ['ui.router', 'ui.bootstrap', 'ngMaterial
 
 app.config(['$stateProvider', '$locationProvider', '$mdThemingProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $mdThemingProvider, $urlRouterProvider) {
 
+    $locationProvider.hashPrefix('')
+        .html5Mode(true);
+    $urlRouterProvider.otherwise('/');
 
+    $stateProvider
+        .state('home', {
+            url: '/',
+            component: 'home'
+        }).state('signup', {
+            url: '/signup',
+            component: 'signup'
+        });
 
 }]);

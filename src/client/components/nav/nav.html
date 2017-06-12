@@ -1,0 +1,19 @@
+<md-toolbar class="md-toolbar-tools md-whiteframe-12dp" md-scroll-shrink ng-if="true">
+
+    <md-button class="glyphicon glyphicon-menu-hamburger btn btn-lg hide-gt-md" ng-click="toggleLeft()" hide-gt-md></md-button>
+    <h1 class="md-Primary">Lean</h1>
+    <span flex></span>
+    <md-button ui-sref="signup">Signup</md-button>
+
+</md-toolbar>
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+
+    <md-content layout-padding>
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+            Close Sidenav Left
+        </md-button>
+        <p hide show-gt-md>
+            This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
+        </p>
+    </md-content>
+</md-sidenav>
