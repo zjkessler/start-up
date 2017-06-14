@@ -1,19 +1,38 @@
 <md-toolbar class="md-toolbar-tools md-whiteframe-12dp" md-scroll-shrink ng-if="true">
 
-    <md-button class="glyphicon glyphicon-menu-hamburger btn btn-lg hide-gt-md" ng-click="toggleLeft()" hide-gt-md></md-button>
-    <h1 class="md-Primary">Lean</h1>
+    <md-button class="md-icon-button md-accent" ng-click="nav.toggleLeft()">
+        <ng-md-icon icon="menu"></ng-md-icon>
+    </md-button>
+    <a ui-Sref="home">
+        <h1 class="md-Primary">Lean</h1>
+    </a>
     <span flex></span>
-    <md-button ui-sref="signup">Signup</md-button>
+    <a ui-sref="{{nav.links[2].link}}">
+        <ng-md-icon icon="{{nav.links[2].icon}}">
+    </a>
+    <a ui-sref="{{nav.links[3].link}}">
+        <ng-md-icon icon="{{nav.links[3].icon}}">
+    </a>
 
 </md-toolbar>
-<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
 
     <md-content layout-padding>
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close Sidenav Left
+        <md-button ng-click="nav.close()" class="md-accent md-icon-button">
+            <ng-md-icon icon="clear"></ng-md-icon>
         </md-button>
-        <p hide show-gt-md>
+        <p>
             This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
         </p>
+        <md-menu-content ng-repeat="item in nav.links">
+            <md-menu-item>
+                <md-button class="" ui-sref="{{item.link}}" ng-click="nav.close()">
+                    <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                    {{item.name}}
+                </md-button>
+
+            </md-menu-item>
+            <md-divider></md-divider>
+        </md-menu-content>
     </md-content>
 </md-sidenav>

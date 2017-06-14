@@ -1,4 +1,8 @@
 {
-    "eslint.enable": false,
-    "jshint.enable": false
+    "eslint.enable": true,
+    "jshint.enable": false,
+    "jshint.options": {
+        "esversion": 6
+    },
+
 }

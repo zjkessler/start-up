@@ -15,4 +15,7 @@ app.config(['$stateProvider', '$locationProvider', '$mdThemingProvider', '$urlRo
             component: 'signup'
         });
 
+    $mdThemingProvider.theme('default')
+        .primaryPalette('yellow')
+        .accentPalette('cyan');
 }]);
