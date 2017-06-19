@@ -2,10 +2,10 @@
 
 module.exports = function () {
 
-	var client = './src/client/';
-	var server = './src/server/';
+	const client = './src/client/';
+	const server = './src/server/';
 
-	var config = {
+	const config = {
 
 		alljs: ['./src/**/*.js',
 			'./*js', '!' + client + 'bower_components/**/*.js'
@@ -33,8 +33,8 @@ module.exports = function () {
 		nodeServer: server + 'server.js'
 	};
 
-	config.getWiredepDefaultOptions = function () {
-		var options = {
+	config.getWiredepDefaultOptions = () => {
+		const options = {
 			bowerJson: config.bower.json,
 			directory: config.bower.directory,
 			ignorePath: config.bower.ignorePath

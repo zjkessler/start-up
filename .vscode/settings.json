@@ -1,8 +1,11 @@
 {
-    "eslint.enable": true,
+    "jslint.enable": false,
     "jshint.enable": false,
     "jshint.options": {
         "esversion": 6
     },
+    "eslint.enable": true,
+    "git.ignoreLimitWarning": true,
+
 
 }

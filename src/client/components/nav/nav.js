@@ -1,13 +1,13 @@
-(function () {
+(() >= {
     'use strict';
     var app = angular.module('StartUpApp');
 
     app.component('nav', {
         templateUrl: 'components/nav/nav.html',
-        controller: 'navCtrl as nav'
+        controller: 'navCtrl as nav',
     });
 
-    app.controller('navCtrl', ['$timeout', '$mdSidenav', "$log", "navSvc", function ($timeout, $mdSidenav, $log, navSvc) {
+    app.controller('navCtrl', ['$timeout', '$mdSidenav', '$log', 'navSvc', function ($timeout, $mdSidenav, $log, navSvc) {
         var nav = this;
 
         nav.links = navSvc.mainLinks;
@@ -22,21 +22,7 @@
                     $log.debug("close LEFT is done");
                 });
         };;
-
-
-
-        //////////////////////////////////////////
-
-        function closeSideNav() {
-            $mdSidenav('left').close()
-                .then(function () {
-                    $log.debug("close LEFT is done");
-                });
-        };
     }]);
-
-
-
 
     app.service('navSvc', function () {
         var nav = this;
@@ -46,7 +32,7 @@
                 link: 'home'
             }, {
                 name: 'HOW IT WORKS',
-                icon: '',
+                icon: 'loyalty',
                 link: ''
             },
             {
@@ -60,16 +46,13 @@
                 link: 'login'
             }, {
                 name: "ABOUT",
-                icon: '',
-                link: 'about'
+                icon: 'people',
+                link: 'about',
             }, {
                 name: "LOCATIONS",
-                icon: '',
-                link: 'locations'
+                icon: 'directions',
+                link: 'locations',
             }
         ];
-
-        ////////////////
-
-    })
+    });
 })();

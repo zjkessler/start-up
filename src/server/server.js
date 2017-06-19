@@ -1,15 +1,15 @@
 'use strict';
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
-var path = require('path');
-var logger = require('morgan');
-var port = process.env.PORT || 5000;
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const path = require('path');
+const logger = require('morgan');
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(logger('dev'));
 
-app.listen(port, function () {
+app.listen(port, () => {
     console.log('Server is listening on port: ' + port);
-})
+});
